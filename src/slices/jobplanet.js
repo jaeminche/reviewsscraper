@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const initialState = {
   loading: false,
   hasErrors: false,
+  form: { search: "" },
   companies: []
 };
 
@@ -10,6 +11,9 @@ const companiesSlice = createSlice({
   name: "companies",
   initialState,
   reducers: {
+    changeField: (state, { payload: { form, key, value } }) => {
+      state[form][key] = value;
+    },
     getCompanies: state => {
       state.loading = true;
     },
@@ -26,6 +30,7 @@ const companiesSlice = createSlice({
 });
 
 export const {
+  changeField,
   getCompanies,
   getCompaniesSuccess,
   getCompaniesFailure

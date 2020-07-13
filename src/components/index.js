@@ -2,5 +2,6 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Hamburger from "./Hamburger";
 import ScrollTopToRoute from "./ScrollTopToRoute";
+import TableContainer from "./TableContainer";
 
-export { Navbar, Footer, Hamburger, ScrollTopToRoute };
+export { TableContainer, Navbar, Footer, Hamburger, ScrollTopToRoute };
